@@ -1,3 +1,6 @@
 [submodule "NFTVC-auth"]
 	path = NFTVC-auth
 	url = git@github.com:BrockenBots/NFTVC-auth.git
+[submodule "NFTVC-frontend"]
+	path = NFTVC-frontend
+	url = git@github.com:BrockenBots/NFTVC-frontend.git
