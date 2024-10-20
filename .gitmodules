@@ -7,3 +7,6 @@
 [submodule "NFTVC-achievements"]
 	path = NFTVC-achievements
 	url = git@github.com:BrockenBots/NFTVC-achievements.git
+[submodule "NFTVC-crypto"]
+	path = NFTVC-crypto
+	url = git@github.com:BrockenBots/NFTVC-crypto.git
