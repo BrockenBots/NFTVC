@@ -10,3 +10,6 @@
 [submodule "NFTVC-crypto"]
 	path = NFTVC-crypto
 	url = git@github.com:BrockenBots/NFTVC-crypto.git
+[submodule "NFTVC-profiles"]
+	path = NFTVC-profiles
+	url = git@github.com:BrockenBots/NFTVC-profiles.git
