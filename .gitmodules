@@ -13,3 +13,6 @@
 [submodule "NFTVC-profiles"]
 	path = NFTVC-profiles
 	url = git@github.com:BrockenBots/NFTVC-profiles.git
+[submodule "NFTVC-file-server"]
+	path = NFTVC-file-server
+	url = git@github.com:BrockenBots/NFTVC-file-server.git

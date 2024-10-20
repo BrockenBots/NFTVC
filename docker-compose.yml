@@ -87,6 +87,31 @@ services:
   #     - auth
   #     - s3
 
+  file-server:
+    ports:
+      - "2999:2999"
+    build:
+      context: ./NFTVC-file-server
+      dockerfile: Dockerfile
+    networks:
+      - app_network
+
+  next:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    develop:
+      watch:
+        - action: sync
+          path: ./public
+          target: /app/public
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: rebuild
+          path: package.json
+
 volumes:
   mongodb-volume-data:
   redis:
