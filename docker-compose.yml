@@ -74,6 +74,19 @@ services:
     networks:
       - app_network
 
+  # nginx:
+  #   image: nginx:alpine
+  #   volumes:
+  #     - ./nginx/conf/default.conf:/usr/local/openresty/nginx/conf/nginx.conf
+  #   ports:
+  #     - "8000:80"
+  #   networks:
+  #     - app_network
+  #   depends_on:
+  #     - profile
+  #     - auth
+  #     - s3
+
 volumes:
   mongodb-volume-data:
   redis:
