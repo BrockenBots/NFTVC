@@ -89,11 +89,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
+    networks:
+      - app_network
     depends_on:
       - file-server
       - auth 
       - profile
-
 
   openresty:
     build: 
@@ -108,6 +109,7 @@ services:
     depends_on:
       - auth
       - profile
+      - frontend
 
 volumes:
   mongodb-volume-data:
