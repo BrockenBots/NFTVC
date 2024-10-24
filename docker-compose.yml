@@ -32,6 +32,8 @@ services:
     ports: 
      - "8082:8082"
     depends_on:
+      auth: 
+        condition: service_started
       mongodb:
         condition: service_healthy
       s3: 
@@ -93,8 +95,6 @@ services:
       - app_network
     depends_on:
       - file-server
-      - auth 
-      - profile
 
   openresty:
     build: 
