@@ -74,19 +74,6 @@ services:
     networks:
       - app_network
 
-  # nginx:
-  #   image: nginx:alpine
-  #   volumes:
-  #     - ./nginx/conf/default.conf:/usr/local/openresty/nginx/conf/nginx.conf
-  #   ports:
-  #     - "8000:80"
-  #   networks:
-  #     - app_network
-  #   depends_on:
-  #     - profile
-  #     - auth
-  #     - s3
-
   file-server:
     ports:
       - "2999:2999"
@@ -103,9 +90,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-    - ./public:/app/public
-    - ./src:/app/src
-    - ./package.json:/app/package.json
+    - ./NFTVC-frontend/public:/app/public
+    - ./NFTVC-frontend/src:/app/src
+    - ./NFTVC-frontend/package.json:/app/package.json
 
 volumes:
   mongodb-volume-data:
