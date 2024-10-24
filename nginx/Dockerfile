@@ -1,5 +1,5 @@
-FROM nginx:alpine
+FROM openresty/openresty:alpine
 
 COPY conf/default.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 81

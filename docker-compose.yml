@@ -97,6 +97,19 @@ services:
   #     - file-server
   #     - auth 
   #     - profile
+  openresty:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    volumes:
+      - ./nginx/conf/default.conf:/usr/local/openresty/nginx/conf/nginx.conf
+    ports:
+      - "81:81"
+    networks:
+      - app_network
+    depends_on:
+      - auth
+      - profile
 
 volumes:
   mongodb-volume-data:
