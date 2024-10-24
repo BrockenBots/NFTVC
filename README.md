@@ -4,7 +4,7 @@
 
 # Запуск полноценный
 ```git clone https://github.com/BrockenBots/NFTVC.git```
-```docker-compose up --build```
+```docker-compose up --build -d```
 
 # У нас есть:
 - Фронтенд, где можно запросить сертификат, верифицировать, выпустить нфт
