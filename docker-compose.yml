@@ -83,20 +83,18 @@ services:
     networks:
       - app_network
 
-  # frontend:
-  #   build:
-  #     context: ./NFTVC-frontend
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #   - ./public:/app/public
-  #   - ./src:/app/src
-  #   - ./package.json:/app/package.json
-  #   depends_on:
-  #     - file-server
-  #     - auth 
-  #     - profile
+  frontend:
+    build:
+      context: ./NFTVC-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - file-server
+      - auth 
+      - profile
+
+
   openresty:
     build: 
       context: ./nginx
