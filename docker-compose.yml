@@ -90,7 +90,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-    - ./:/app
+    - /public:/app/public
+    - /src:/app/src
+    - /package.json:/app/package.json
     depends_on:
       - file-server
       - auth 
