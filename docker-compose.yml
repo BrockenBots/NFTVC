@@ -83,16 +83,20 @@ services:
     networks:
       - app_network
 
-  next:
+  frontend:
     build:
       context: ./NFTVC-frontend
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
-    - ./NFTVC-frontend/public:/app/public
-    - ./NFTVC-frontend/src:/app/src
-    - ./NFTVC-frontend/package.json:/app/package.json
+    - /public:/app/public
+    - /src:/app/src
+    - /package.json:/app/package.json
+    depends_on:
+      - file_server
+      - auth 
+      - profile
 
 volumes:
   mongodb-volume-data:
